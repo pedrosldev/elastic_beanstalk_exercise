@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo Rotatorio</title>
+    <a href="login.html">
+        <button>Ir al Login</button>
+    </a>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .texto {
+            font-size: 2rem;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="texto" id="holaMundo">Hola Mundo</div>
+    
+    <script>
+        const texto = document.getElementById("holaMundo");
+        texto.addEventListener("mouseenter", () => {
+            texto.style.transform = "rotate(180deg)";
+        });
+        texto.addEventListener("mouseleave", () => {
+            texto.style.transform = "rotate(0deg)";
+        });
+    </script>
+</body>
+</html>
